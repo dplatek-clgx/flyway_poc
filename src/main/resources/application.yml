@@ -1,0 +1,22 @@
+server:
+  port: 9095
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flyway_demo
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  flyway:
+    url: jdbc:postgresql://localhost:5432/flyway_demo
+    schemas: public
+    user: postgres
+    password: admin
+    enabled: true
+
